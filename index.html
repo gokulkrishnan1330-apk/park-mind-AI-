@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ParkMind AI | Smart Parking</title>
+
+    <!-- Connect existing CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a class="logo" href="index.html">
+            ParkMind <span>AI</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#find-parking">Find Parking</a>
+            <a href="#recommendations">Recommendations</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+
+        <a class="login-link" href="#login">Login</a>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <p class="eyebrow">SMART PARKING INTELLIGENCE</p>
+
+            <h1>
+                Find parking.<br>
+                Skip the search.
+            </h1>
+
+            <p class="subtitle">
+                Discover suitable parking options before you arrive.
+            </p>
+
+            <!-- Parking Search Form -->
+            <form id="parkingForm" class="search-card">
+
+                <label for="destination">Destination</label>
+                <input
+                    id="destination"
+                    name="destination"
+                    type="text"
+                    placeholder="Enter a place or address"
+                    required
+                >
+
+                <label for="arrival">Arrival date and time</label>
+                <input
+                    id="arrival"
+                    name="arrival"
+                    type="datetime-local"
+                    required
+                >
+
+                <label for="vehicle">Choose your vehicle</label>
+                <select id="vehicle" name="vehicle" required>
+                    <option value="">Select vehicle type</option>
+                    <option value="TWO_WHEELER">2-Wheeler</option>
+                    <option value="FOUR_WHEELER">4-Wheeler</option>
+                    <option value="EV">Electric Vehicle (EV)</option>
+                </select>
+
+                <button type="submit">Find Parking</button>
+
+                <p id="searchMessage" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <!-- Parking Search Results -->
+        <section id="find-parking" class="parking-results-section">
+            <h2>Available Parking Options</h2>
+
+            <p class="results-note">
+                Sample listings for development. Availability is not live.
+            </p>
+
+            <div
+                id="parkingResults"
+                class="parking-grid"
+                aria-live="polite"
+            >
+                <p class="empty-state">
+                    Enter your destination and search to view parking options.
+                </p>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="recommendations" class="features">
+            <h2>Park smarter with ParkMind AI</h2>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+                    <h3>Demand Prediction</h3>
+                    <p>
+                        Estimate how busy a parking area may become
+                        using historical parking data.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Smart Recommendations</h3>
+                    <p>
+                        Compare distance, price, and reported availability
+                        to identify suitable parking options.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Easy Reservations</h3>
+                    <p>
+                        Plan future parking reservations when verified
+                        availability and booking services are connected.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>ParkMind AI — Smarter parking, less searching.</p>
+        <p class="footer-note">
+            Development prototype. Parking listings and availability
+            are sample data and are not real-time.
+        </p>
+    </footer>
+
+    <!-- Connect existing JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
